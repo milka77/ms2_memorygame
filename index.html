@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+    <title>JavaScript Memory Game</title>
+</head>
+<body>
+    <div class="content">
+        <div id="header">
+            <div id="nav">
+                <button class="btn btn-success">New Game</button>
+            </div>
+            <div id="date"></div>
+        </div>
+        <div id="game-content">
+            <div class="card">
+                <img class="front-face" src="assets/images/lmp1_1.png" alt="card lmp1 car">
+                <img class="back-face" src="assets/images/card_back.png" alt="card backside">
+            </div>
+            <div class="card">
+                <img class="front-face" src="assets/images/lmp1_1.png" alt="card lmp1 car">
+                <img class="back-face" src="assets/images/card_back.png" alt="card backside">
+            </div>
+            <div class="card">
+                <img class="front-face" src="assets/images/lmp1_2.png" alt="card lmp1 car">
+                <img class="back-face" src="assets/images/card_back.png" alt="card backside">
+            </div>
+            <div class="card">
+                <img class="front-face" src="assets/images/lmp1_2.png" alt="card lmp1 car">
+                <img class="back-face" src="assets/images/card_back.png" alt="card backside">
+            </div>
+            <div class="card">
+                <img class="front-face" src="assets/images/lmp1_3.png" alt="card lmp1 car">
+                <img class="back-face" src="assets/images/card_back.png" alt="card backside">
+            </div>
+            <div class="card">
+                <img class="front-face" src="assets/images/lmp1_3.png" alt="card lmp1 car">
+                <img class="back-face" src="assets/images/card_back.png" alt="card backside">
+            </div>
+            <div class="card">
+                <img class="front-face" src="assets/images/lmp2_1.png" alt="card lmp1 car">
+                <img class="back-face" src="assets/images/card_back.png" alt="card backside">
+            </div>
+            <div class="card">
+                <img class="front-face" src="assets/images/lmp2_1.png" alt="card lmp1 car">
+                <img class="back-face" src="assets/images/card_back.png" alt="card backside">
+            </div>
+            <div class="card">
+                <img class="front-face" src="assets/images/lmp2_2.png" alt="card lmp1 car">
+                <img class="back-face" src="assets/images/card_back.png" alt="card backside">
+            </div>
+            <div class="card">
+                <img class="front-face" src="assets/images/lmp2_2.png" alt="card lmp1 car">
+                <img class="back-face" src="assets/images/card_back.png" alt="card backside">
+            </div><div class="card">
+                <img class="front-face" src="assets/images/lmp2_3.png" alt="card lmp1 car">
+                <img class="back-face" src="assets/images/card_back.png" alt="card backside">
+            </div>
+            <div class="card">
+                <img class="front-face" src="assets/images/lmp2_3.png" alt="card lmp1 car">
+                <img class="back-face" src="assets/images/card_back.png" alt="card backside">
+            </div>
+            <div class="card">
+                <img class="front-face" src="assets/images/lmgtepro1_1.png" alt="card lmp1 car">
+                <img class="back-face" src="assets/images/card_back.png" alt="card backside">
+            </div>
+            <div class="card">
+                <img class="front-face" src="assets/images/lmgtepro1_1.png" alt="card lmp1 car">
+                <img class="back-face" src="assets/images/card_back.png" alt="card backside">
+            </div>
+            <div class="card">
+                <img class="front-face" src="assets/images/lmgtepro1_2.png" alt="card lmp1 car">
+                <img class="back-face" src="assets/images/card_back.png" alt="card backside">
+            </div>
+            <div class="card">
+                <img class="front-face" src="assets/images/lmgtepro1_2.png" alt="card lmp1 car">
+                <img class="back-face" src="assets/images/card_back.png" alt="card backside">
+            </div>
+            <div class="card">
+                <img class="front-face" src="assets/images/lmgtepro1_3.png" alt="card lmp1 car">
+                <img class="back-face" src="assets/images/card_back.png" alt="card backside">
+            </div>
+            <div class="card">
+                <img class="front-face" src="assets/images/lmgtepro1_3.png" alt="card lmp1 car">
+                <img class="back-face" src="assets/images/card_back.png" alt="card backside">
+            </div>
+            <div class="card">
+                <img class="front-face" src="assets/images/lmgtepro1_4.png" alt="card lmp1 car">
+                <img class="back-face" src="assets/images/card_back.png" alt="card backside">
+            </div>
+            <div class="card">
+                <img class="front-face" src="assets/images/lmgtepro1_4.png" alt="card lmp1 car">
+                <img class="back-face" src="assets/images/card_back.png" alt="card backside">
+            </div>
+            <div class="card">
+                <img class="front-face" src="assets/images/lmgteam1_1.png" alt="card lmp1 car">
+                <img class="back-face" src="assets/images/card_back.png" alt="card backside">
+            </div>
+            <div class="card">
+                <img class="front-face" src="assets/images/lmgteam1_1.png" alt="card lmp1 car">
+                <img class="back-face" src="assets/images/card_back.png" alt="card backside">
+            </div>
+            <div class="card">
+                <img class="front-face" src="assets/images/lmgteam1_2.png" alt="card lmp1 car">
+                <img class="back-face" src="assets/images/card_back.png" alt="card backside">
+            </div>
+            <div class="card">
+                <img class="front-face" src="assets/images/lmgteam1_2.png" alt="card lmp1 car">
+                <img class="back-face" src="assets/images/card_back.png" alt="card backside">
+            </div>
+            <div class="card">
+                <img class="front-face" src="assets/images/lmgte_aston.png" alt="card lmp1 car">
+                <img class="back-face" src="assets/images/card_back.png" alt="card backside">
+            </div>
+            <div class="card">
+                <img class="front-face" src="assets/images/lmgte_aston.png" alt="card lmp1 car">
+                <img class="back-face" src="assets/images/card_back.png" alt="card backside">
+            </div>
+            <div class="card">
+                <img class="front-face" src="assets/images/rolex.png" alt="card lmp1 car">
+                <img class="back-face" src="assets/images/card_back.png" alt="card backside">
+            </div>
+            <div class="card">
+                <img class="front-face" src="assets/images/rolex.png" alt="card lmp1 car">
+                <img class="back-face" src="assets/images/card_back.png" alt="card backside">
+            </div>
+            <div class="card">
+                <img class="front-face" src="assets/images/michelin.png" alt="card lmp1 car">
+                <img class="back-face" src="assets/images/card_back.png" alt="card backside">
+            </div>
+            <div class="card">
+                <img class="front-face" src="assets/images/michelin.png" alt="card lmp1 car">
+                <img class="back-face" src="assets/images/card_back.png" alt="card backside">
+            </div>
+        </div>
+        <div id="footer">
+            <span>&copy; 2020 by Krisztian Keseru</span>
+        </div>
+    </div>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
