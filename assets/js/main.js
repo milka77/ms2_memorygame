@@ -1,12 +1,16 @@
 // Select HTML elements
 let date = document.getElementById('date');
 let card = document.querySelectorAll('.card');
+let footerYear = document.getElementById('year');
 
 // Show todays date
 let options = {day:'numeric', weekday:'long', month:'long',};
 let currentDate = new Date();
 
 date.innerHTML = currentDate.toLocaleDateString('en-US', options);
+
+// Show current year in the footer
+footerYear.innerHTML = currentDate.getFullYear();
 
 // Memory card game
 let flippedCard = false;
