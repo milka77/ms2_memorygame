@@ -4,6 +4,7 @@ const card = document.querySelectorAll('.card');
 const footerYear = document.getElementById('year');
 const info = document.getElementById('info-msg');
 const done = document.getElementById('done-msg');
+const clickNr = document.getElementById('clicks');
 
 
 // Show todays date
@@ -66,6 +67,7 @@ function flipOver(){
     // Show the end game screen
     if (pairs <= 0){
         done.style.display = 'block';
+        clickNr.innerHTML = clicks + " clicks";
     }
 }
 
@@ -76,6 +78,9 @@ function match(){
     secondCard.removeEventListener('click', flipOver);
     secondCard.classList.add('bg_green');
     pairs --;
+    clicks += 2;
+    console.log(clicks);
+    
 }
 
 // Not matching cards
@@ -84,6 +89,7 @@ function flipBack() {
     firstCard.classList.add('bg_red');
     secondCard.classList.add('bg_red');
     clicks += 2;
+    console.log(clicks);
     setTimeout(() => {
         firstCard.classList.remove('flip');
         firstCard.classList.remove('bg_red');
@@ -106,6 +112,10 @@ function shuffle() {
         cards.style.order = randomPosition;
     })
 }
+
+// Display the number of clicks the game was completed
+clickNr.innerHTML = clicks + " clicks";
+
 
 // Reset the game, new game
 function reset() {
