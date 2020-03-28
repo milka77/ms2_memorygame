@@ -146,9 +146,24 @@ body {
     background-color: rgba(0,0,0,0.9);
     border-radius: 10px;
     padding-top: 40px;
-    display: none;
+
 }
 
+#done-msg {
+    display: none;
+}
 #info-msg {
-    display: block;
+    
+    font-size: 1.2rem;
+    height: 400px;
+    top: 21vh;
+    padding-left: 10px;
+    padding-right: 10px;
+   
+}
+
+#info-msg a {
+    color: #dadada;
+    text-decoration: none;
+    
 }

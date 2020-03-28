@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css" type="text/css">
-    <title>JavaScript Memory Game</title>
+    <title>FIA WEC JavaScript Memory Game</title>
 </head>
 <body>
     <div class="content">
@@ -20,19 +20,26 @@
             <div id="player"><input id="name-input" type="text" placeholder=" Enter your name" onchange="playerName()"></div>
         </div>
         <!-- /Header -->
+
         <div id="game-content">
+
             <!-- Info screen -->
-            <div id="info-msg">Congratulations<br> you found all pairs!<br>
-                <button class="btn btn-success" onclick="windowClose()">Hurray!</button>
+            <div id="info-msg">
+                Welcome to my FIA WEC memory card game.<br><br>
+                <u>Game info:</u> <br>
+                You need to find all 15 paris to complete the game. If you wish you can enter your name on the top right corner. Enjoy it!<br><br>
+                All the pictures and logos are from <a href="http://www.fiawec.com" target="_blank">FIA WEC</a> and used for educational purposes only!<br><br>
+                <button class="btn btn-success" onclick="windowClose()">Let's play!</button>
             </div>
             <!-- /Finish screen -->
 
-            <!-- Finish screen -->
+            <!-- Finish screen : display hidden by default -->
             <div id="done-msg">Congratulations<br> you found all pairs!<br>
                 <button class="btn btn-success" onclick="windowClose()">Hurray!</button>
             </div>
             <!-- /Finish screen -->
 
+            <!-- Memory card game content-->
             <div class="card" data-carddata="lmp1_1">
                 <img class="front-face" src="assets/images/lmp1_1.png" alt="card lmp1 car">
                 <img class="back-face" src="assets/images/card_back.png" alt="card backside">
@@ -153,10 +160,14 @@
                 <img class="front-face" src="assets/images/michelin.png" alt="card lmp1 car">
                 <img class="back-face" src="assets/images/card_back.png" alt="card backside">
             </div>
+            <!-- /Memory card game content-->
         </div>
+
+        <!-- Footer-->
         <div id="footer">
             <p>&copy; <span id="year"></span> by Krisztian Keseru. <span>For educational purposes only</span></p>
         </div>
+        <!-- /Footer-->
     </div>
     <script src="assets/js/main.js"></script>
 </body>

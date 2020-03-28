@@ -25,7 +25,7 @@ function playerName() {
 }
  
 
-// Memory card game
+// Memory card game logic
 let flippedCard = false;
 let firstCard, secondCard;
 let gameLock = false;
@@ -63,7 +63,7 @@ function flipOver(){
 
     // Show the end game screen
     if (pairs <= 0){
-        win.style.display = 'block';
+        done.style.display = 'block';
     }
 }
 
@@ -88,10 +88,13 @@ function flipBack() {
     }, 1600);
 }
 
+// Closing on click the info and done windows 
 function windowClose() {
-    win.style.display = 'none';
-}
+    info.style.display = 'none';
+    done.style.display = 'none';
+}    
 
+// Reset the game, new game
 function reset() {
     flippedCard = false;
     firstCard, secondCard = [null, null];
