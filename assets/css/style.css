@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap');
 
+/* Basic styling -----------*/
 * {
     margin: 0;
     padding: 0;
@@ -13,11 +14,9 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-.btn-success {
-    margin-top: 10px;
-}
 
 .content {
+    position: relative;
     background-color: rgb(29, 29, 29);
     width: 70vw;
     min-height: 100vh;
@@ -28,6 +27,7 @@ body {
     color: #fefefe;
 }
 
+/* Header  ----------------- */
 #header {
     background-color: rgb(29, 29, 29);
     height: 60px;
@@ -35,14 +35,35 @@ body {
     border-bottom: 1px solid rgba(255,255,255,0.5);
 }
 
-#date {
+#date, #player {
     font-size: 1.2rem;
-    padding: 0 0 5px 30px;
     position: absolute;
     bottom: 0;
 }
 
+#date { 
+    padding: 0 0 5px 30px;
+}
+
+#player {
+    right: 0;
+    padding: 0 30px 5px 0;
+}
+
+#name-input {
+    background-color: rgba(99, 99, 99, 0.2);
+    border: none;
+    border-radius: 5px;
+    color: #fefefe;
+}
+
+.btn-success {
+    margin-top: 10px;
+}
+
+/* Game content and cards actions ------------------- */
 #game-content {
+    position: relative;
     height: 89vh;
     width: 94%;
     margin: 10px auto 10px auto;
@@ -55,12 +76,6 @@ body {
     background: linear-gradient(90deg, rgba(36,71,33,0.5) 0%, rgba(58,116,51,1) 49%, rgba(36,71,33,0.5) 100%);
 }
 
-#footer {
-    border-top: 1px solid rgba(255,255,255,0.5);
-    font-size: 0.8rem;
-}
-
-/* Memory cards and card actions ------ */
 .card {
     display: flex;
     margin: 5px;
@@ -105,4 +120,35 @@ body {
 
 .bg_red {
     background-color: rgba(209,59,59,0.8);
+}
+
+/* Footer ------------------- */
+#footer {
+    border-top: 1px solid rgba(255,255,255,0.5);
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+#footer p {
+    margin: 0;
+}
+
+/* Game announcements ------ */
+#done-msg, #info-msg {
+    font-size: 2rem;
+    position: absolute;
+    margin: auto;
+    height: 250px;
+    width: 500px;
+    top: 31vh;
+    left: 17vw;
+    z-index: 10;
+    background-color: rgba(0,0,0,0.9);
+    border-radius: 10px;
+    padding-top: 40px;
+    display: none;
+}
+
+#info-msg {
+    display: block;
 }

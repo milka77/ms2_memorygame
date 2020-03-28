@@ -11,13 +11,28 @@
 </head>
 <body>
     <div class="content">
+        <!-- Header -->
         <div id="header">
             <div id="nav">
-                <button class="btn btn-success">New Game</button>
+                <button class="btn btn-success" onclick="reset()">New Game</button>
             </div>
             <div id="date"></div>
+            <div id="player"><input id="name-input" type="text" placeholder=" Enter your name" onchange="playerName()"></div>
         </div>
+        <!-- /Header -->
         <div id="game-content">
+            <!-- Info screen -->
+            <div id="info-msg">Congratulations<br> you found all pairs!<br>
+                <button class="btn btn-success" onclick="windowClose()">Hurray!</button>
+            </div>
+            <!-- /Finish screen -->
+
+            <!-- Finish screen -->
+            <div id="done-msg">Congratulations<br> you found all pairs!<br>
+                <button class="btn btn-success" onclick="windowClose()">Hurray!</button>
+            </div>
+            <!-- /Finish screen -->
+
             <div class="card" data-carddata="lmp1_1">
                 <img class="front-face" src="assets/images/lmp1_1.png" alt="card lmp1 car">
                 <img class="back-face" src="assets/images/card_back.png" alt="card backside">
@@ -140,7 +155,7 @@
             </div>
         </div>
         <div id="footer">
-            <span>&copy; <span id="year"></span> by Krisztian Keseru</span>
+            <p>&copy; <span id="year"></span> by Krisztian Keseru. <span>For educational purposes only</span></p>
         </div>
     </div>
     <script src="assets/js/main.js"></script>
