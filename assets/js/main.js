@@ -30,8 +30,10 @@ let flippedCard = false;
 let firstCard, secondCard;
 let gameLock = false;
 let pairs = 15;
+let clicks = 0;
 
 card.forEach(cards => cards.addEventListener('click', flipOver));
+shuffle();
 
 function flipOver(){
     if (gameLock) return;
@@ -67,6 +69,7 @@ function flipOver(){
     }
 }
 
+// Matching cards 
 function match(){
     firstCard.removeEventListener('click', flipOver);
     firstCard.classList.add('bg_green');
@@ -75,10 +78,12 @@ function match(){
     pairs --;
 }
 
+// Not matching cards
 function flipBack() {
     gameLock = true;
     firstCard.classList.add('bg_red');
     secondCard.classList.add('bg_red');
+    clicks += 2;
     setTimeout(() => {
         firstCard.classList.remove('flip');
         firstCard.classList.remove('bg_red');
@@ -94,12 +99,22 @@ function windowClose() {
     done.style.display = 'none';
 }    
 
+// Card shuffle
+function shuffle() {
+    card.forEach(cards => {
+        let randomPosition = Math.floor(Math.random() * 30);
+        cards.style.order = randomPosition;
+    })
+}
+
 // Reset the game, new game
 function reset() {
     flippedCard = false;
-    firstCard, secondCard = [null, null];
+    [firstCard, secondCard] = [null, null];
     pairs = 15;
+    clicks = 0;
+    card.forEach(cardReset => cardReset.classList.remove('flip'));
+    card.forEach(cardBg => cardBg.classList.remove('bg_green'));
     card.forEach(cards => cards.addEventListener('click', flipOver));
+    shuffle();
 }
-
-
