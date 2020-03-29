@@ -12,6 +12,7 @@ body {
     background: url('../images/bg1.jpg') no-repeat center fixed;
     background-size: cover;
     font-family: 'Montserrat', sans-serif;
+    overflow: hidden;
 }
 
 
@@ -136,7 +137,7 @@ body {
 
 /* Game announcements ------ */
 #done-msg, #info-msg {
-    font-size: 2rem;
+    font-size: 1.5rem;
     position: absolute;
     margin: auto;
     height: 250px;
@@ -146,25 +147,35 @@ body {
     z-index: 10;
     background-color: rgba(0,0,0,0.9);
     border-radius: 10px;
-    padding-top: 40px;
-
+    padding-top: 20px;
 }
 
 #done-msg {
     display: none;
+    padding-top: 30px;
 }
-#info-msg {
-    
+
+#done-msg p{
+    margin-bottom: 10px;    
+}
+
+#info-msg {    
     font-size: 1.2rem;
     height: 400px;
     top: 21vh;
     padding-left: 10px;
     padding-right: 10px;
-   
 }
 
 #info-msg a {
     color: #dadada;
     text-decoration: none;
-    
+}
+
+#win-msg {
+    text-transform: uppercase;
+    background-color: rgba(255,63,0,0.6);
+    margin: 0 15px 10px 15px;
+    border-radius: 8px;
+    text-shadow: 2px 3px 2px #000;
 }
