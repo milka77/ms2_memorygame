@@ -37,7 +37,7 @@ let clicks = 0;
 card.forEach(cards => cards.addEventListener('click', flipOver));
 shuffle();
 
-function flipOver(){
+function flipOver() {
     if (gameLock) return;
     if (this === firstCard) return;
     
@@ -66,7 +66,7 @@ function flipOver(){
     }
 
     // Show the end game screen 
-    if (pairs <= 0){
+    if (pairs <= 0) {
         done.style.display = 'block';
         clickNr.innerHTML = clicks + " clicks";
         
@@ -76,7 +76,7 @@ function flipOver(){
 }
 
 // Matching cards 
-function match(){
+function match() {
     firstCard.removeEventListener('click', flipOver);
     firstCard.classList.add('bg_green');
     secondCard.removeEventListener('click', flipOver);

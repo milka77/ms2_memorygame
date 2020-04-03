@@ -70,11 +70,14 @@ body {
     margin: 10px auto 10px auto;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     perspective: 1000px;
     border: 1px solid rgba(255,255,255,0.2);
     border-radius: 10px;
     background: rgb(58,116,53);
     background: linear-gradient(90deg, rgba(36,71,33,0.5) 0%, rgba(58,116,51,1) 49%, rgba(36,71,33,0.5) 100%);
+    text-align: center;
 }
 
 .card {
@@ -142,8 +145,6 @@ body {
     margin: auto;
     height: 250px;
     width: 500px;
-    top: 33%;
-    left: 30%;
     z-index: 10;
     background-color: rgba(0,0,0,0.9);
     border-radius: 10px;
@@ -162,7 +163,6 @@ body {
 #info-msg {    
     font-size: 1.2rem;
     height: 400px;
-    top: 26%;
     padding-left: 10px;
     padding-right: 10px;
 }
@@ -179,4 +179,14 @@ body {
     margin: 0 15px 10px 15px;
     border-radius: 8px;
     text-shadow: 2px 3px 2px #000;
+}
+
+/* @media Queries ----------- */
+/* Tablet ------------- */
+
+@media (max-width: 1024px) {
+
+    .content {
+        width: 95vw;
+    }
 }
