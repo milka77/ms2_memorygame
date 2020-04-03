@@ -112,11 +112,11 @@ function winMessage() {
         } else if (clicks >= 81 && clicks <= 90) {
             winMsg.innerHTML = 'Awesome!';
         } else if (clicks >= 91 && clicks <= 105) {
-            winMsg.innerHTML = 'valami';
+            winMsg.innerHTML = 'Nice one!';
         } else if (clicks >= 106 && clicks <= 120) {
             winMsg.innerHTML = 'Good job!';
         } else if (clicks > 120) {
-            winMsg.innerHTML = 'You can do it!';
+            winMsg.innerHTML = 'You can do it better!';
         }
 }
 
@@ -140,12 +140,19 @@ clickNr.innerHTML = clicks + " clicks";
 
 // Reset the game, new game
 function reset() {
-    flippedCard = false;
-    [firstCard, secondCard] = [null, null];
-    pairs = 15;
-    clicks = 0;
-    card.forEach(cardReset => cardReset.classList.remove('flip'));
-    card.forEach(cardBg => cardBg.classList.remove('bg_green'));
-    card.forEach(cards => cards.addEventListener('click', flipOver));
-    shuffle();
-}
+    setTimeout(() => {
+        flippedCard = false;
+        [firstCard, secondCard] = [null, null];
+        pairs = 15;
+        clicks = 0;
+        card.forEach(cardReset => cardReset.classList.remove('flip'));
+        card.forEach(cardBg => cardBg.classList.remove('bg_green'));
+        // Remove the red background in that case when the user start a new game
+        // while a not matched pair is stil not flipped back.  
+        card.forEach(cardBg => cardBg.classList.remove('bg_red'));
+        shuffle();
+        card.forEach(cards => cards.addEventListener('click', flipOver));
+        }, 800);
+        // For the case the player don't close the game finished window.
+        windowClose();  
+    }
