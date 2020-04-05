@@ -31,8 +31,21 @@ Link to the the live site: [here](https://milka77.github.io/ms2_memorygame/)
 * The user should be able to close the pop up screen at the end of the game with a click on the "Hurray!" button. 
 * The user should be able to start a new game anytime during the game by clicking the "New Game" button on the middle of the header, they don't need to wait till the game is finished. 
 
----
+### Wireframe 
+Picture 1 
 
+---
+## Features
+### Existing Features
+* Player name - allows users to enter their name and receive a personalised greetings.
+* Memory Game - allows users to click on the cards and play with the game. 
+* New Game - allows users to start a new game anytime. 
+
+### Features Left to Implement
+* Timed game - which shows the user how long they played with the game.
+* Highscore table - allows teh user to see other users score and time. 
+
+---
 ## Technologies Used
 * HTML
 * CSS
@@ -43,9 +56,18 @@ Link to the the live site: [here](https://milka77.github.io/ms2_memorygame/)
 
 ---
 ## Testing
+### Testing All Functions
+* Function playername: 
+
+
 ### Code Validation
 * Validated the HTML code with [W3C](https://validator.w3.org/#validate_by_input) and no error found.
 * Validated the CSS code with [W3C](https://jigsaw.w3.org/css-validator/#validate_by_input) and no error found.
+
+## Deployment
+This project is hosted using GitHub pages, deployed from the master branch. The site will update automatically upon new commits to the master branch. To deploy the project correctly on GitHub pages, the landing site must he named *index.html*
+
+If you want run the project locally you need to clone the repository directly into your favorite editor by writing to the terminal the following: `git clone https://github.com/milka77/ms2_memorygame.git`. 
 
 ---
 ## Media 
