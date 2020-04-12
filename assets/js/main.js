@@ -30,7 +30,7 @@ function playerName() {
 // Memory card game logic
 let flippedCard = false;
 let firstCard, secondCard;
-let gameLock = false;
+let gameLock = true;
 let pairs = 15;
 let clicks = 0;
 
@@ -124,6 +124,7 @@ function winMessage() {
 function windowClose() {
     info.style.display = 'none';
     done.style.display = 'none';
+    gameLock = false;
 }    
 
 // Card shuffle
