@@ -135,7 +135,21 @@ body {
 }
 
 #footer p {
-    margin: 0;
+    margin: 0 0 0 9%;
+}
+
+.fa {
+    color: #fefefe;
+    padding-right: 4px;
+}
+
+.fa:hover {
+    color: #525252;
+}
+
+.social{
+    float: right;
+    margin-right: 3%;
 }
 
 /* Game announcements ------ */
@@ -180,6 +194,8 @@ body {
     border-radius: 8px;
     text-shadow: 2px 3px 2px #000;
 }
+
+
 
 /* @media Queries ----------- */
 /* Tablet ------------- */
