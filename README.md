@@ -1,10 +1,11 @@
 # "FIA WEC" JavaScript memory game
-Milestone Project #2: Interactive Frontend Development - Code Institute
+Milestone Project #2: Interactive Frontend Development - Code Institute.
 
 This project is an FIA WEC (World Endurance Championship) themed interactive JavaScript memory game. It's optimised to desktop computer size monitor and tablet size screen.
 
 Link to the the live site: [here](https://milka77.github.io/ms2_memorygame/)
 
+![Game picture](assets/images/game.png)
 ---
 
 ## UX
@@ -30,9 +31,12 @@ Link to the the live site: [here](https://milka77.github.io/ms2_memorygame/)
   | 120 +     |-| You can do it better!|
 * The user should be able to close the pop up screen at the end of the game with a click on the "Hurray!" button. 
 * The user should be able to start a new game anytime during the game by clicking the "New Game" button on the middle of the header, they don't need to wait till the game is finished. 
+* The user should be able to click any of the social media links at the right side of the footer. When the user hovering the cursor over the social media links the hovered link should be turn grey.
 
 ### Wireframe 
-Picture 1 
+* [Basic site wireframe](https://github.com/milka77/ms2_memorygame/tree/master/assets/images/wireframe/wireframe_1.png)
+
+* [Info and completion screen wireframe](https://github.com/milka77/ms2_memorygame/tree/master/assets/images/wireframe/wireframe_2.png) 
 
 ---
 ## Features
@@ -43,7 +47,7 @@ Picture 1
 
 ### Features Left to Implement
 * Timed game - which shows the user how long they played with the game.
-* Highscore table - allows teh user to see other users score and time. 
+* Highscore table - allows the user to see other users score and time. 
 
 ---
 ## Technologies Used
@@ -55,6 +59,7 @@ Picture 1
 * [Bootstrap 4](https://getbootstrap.com/)
 * [Visual Studio Code](https://code.visualstudio.com/)
 * [GitHub Desktop](https://desktop.github.com/)
+* [Font awesome](https://fontawesome.com/)
 
 ---
 ## Testing
@@ -78,9 +83,11 @@ Picture 1
 
   * **_Click count:_** Tested by console logging the ```clicks``` variable after the match and not a match functions were executed and changing it by +2 (the two clicks which was used to turn the two cards) under the development status. After no errors were found the "console log" was removed from the code. 
 
-  * **_Checking the game completion:_** There are 30 cards (15 pairs) in the game. The ```pairs``` variable was set to 15 and with everytime when a pair got found the match function deducted it by 1. When ```pairs``` reach 0 that means there are no more pairs to find, the completion message will be poping up, the game was complete. Tested the function by playing the game till the end and changing the ```pairs``` variable in the console to check the completion window will pop up. The function was working well, no error was found.
+  * **_Checking the game completion:_** There are 30 cards (15 pairs) in the game. The ```pairs``` variable was set to 15 and with every time when a pair got found the match function deducted it by 1. When ```pairs``` reach 0 that means there are no more pairs to find, the completion message will be poping up, the game was complete. Tested the function by playing the game till the end and changing the ```pairs``` variable in the console to check the completion window will pop up. The function was working well, no error was found.
 
-* The game was tested across multiple browsers(chrome, firefox, safari, internet explorer) and platform(Win7, Win10, iOS, Mac OS) PCs and on my Ipad mini. I asked a few of my colleagues to test it and give some feedback or possible bug reports. 
+* **_Browser and OS:_** The game was tested across multiple browsers(chrome, firefox, safari, internet explorer) and platform(Win7, Win10, iOS, Mac OS) PCs and on my Ipad mini. I asked a few of my colleagues to test it and give some feedback or possible bug reports.
+
+* **_Social media links:_** All links were tested by clicking on them. All links open the required social media site in a new window, tab. While hovering over one of the links it's turns grey as highlighted. No error was found at any of the links. 
 
 ### Bugs and fixes: 
 * _**The following bug reports were reported to me wich I fixed:**_
