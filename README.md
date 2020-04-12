@@ -1,7 +1,7 @@
 # "FIA WEC" JavaScript memory game
 Milestone Project #2: Interactive Frontend Development - Code Institute
 
-This project is an FIA WEC (World Endurance Championship) themed interactive JavaScript memory game. 
+This project is an FIA WEC (World Endurance Championship) themed interactive JavaScript memory game. It's optimised to desktop computer size monitor and tablet size screen.
 
 Link to the the live site: [here](https://milka77.github.io/ms2_memorygame/)
 
@@ -16,7 +16,7 @@ Link to the the live site: [here](https://milka77.github.io/ms2_memorygame/)
 * The user should see an FIA WEC themed background picture on both sides of the game. 
 * The user should be able to click any of the cards which are facing down (not flipped already) to flip it over and try to find the right pairs. 
 * The user should be able to find pairs with clicking on the cards. If they clicked two cards and these cards are the same, they match, the background of the card become green and stay flipped, if they don't match the background of the card become red and turning back. 
-* The user should not be able to click on a new card till the two already flipped over cards which are not matching and not turned back. 
+* The user should not be able to click on a new card till the two already flipped cards which are not matching and not turned back. 
 * The user should be receiving an interactive message at the end of the game when all pairs found depends on how many clicks were used to find all the pairs. The messages and the click ranges are the following:
 
   | Clicks    | |      Messages        |
@@ -51,14 +51,45 @@ Picture 1
 * CSS
 * JavaScript
 * [Google Fonts](https://fonts.google.com)
-* GNU Image Manipulating Program - [GIMP](http://www.gimp.org)
+* [GNU Image Manipulating Program - GIMP](http://www.gimp.org)
 * [Bootstrap 4](https://getbootstrap.com/)
+* [Visual Studio Code](https://code.visualstudio.com/)
+* [GitHub Desktop](https://desktop.github.com/)
 
 ---
 ## Testing
 ### Testing All Functions
-* Function playername: 
+* **_Function player name:_** By clicking on the input field entered a name, on Chrome browser, there are two ways to activate the function **_first:_** when the input field lose the focus it's activating the personalised welcome message. **_second:_** Enter the name and press enter to receive the personalised message. At all the other browsers entered the player name and pressed enter. At every browser I tested was working well.  
 
+* **_New game button:_** Tested several times at the beginning and at the end of the game was working fine no errors found. Tested in the middle of the game some error is discovered which are fixed. The detailed report you can find under the **_bug report and fix_** section. 
+
+* **_Closing window function:_** Tested at the beginning with the info / welcome screen by clicking the _"Let's play!"_ button. Were no errors found. Tested at the game completion screen by pressing the _"Hurray!"_ button. No errors found. Both screens close normally as it should be. 
+
+* **_Personalised completion message:_** 
+  * Tested by playing the game.
+  * Tested by changing the variable ```clicks``` for testing of the correct message will be displayed with the correct click range in the console and console log the message. All ranges were tested and were working well. No error was found!
+
+* **_The game logic:_** 
+  * **_Card flip:_** Tested by clicking on the cards and the clicked cards was flipping over.
+
+  * **_Found a match:_** When clicking on two cars which are the same, both card's background turns to green and they are staying flipped and locked(non clickable anymore) until the game is not complete or until a new game is not started. The match function was working fine, no error was found!
+
+  * **_Not a match:_** When clicking on the second card and the cards are not mathing, the card's background turns to red and after a few milisecond (let the player to memorise the cards) flipping back and the red background removes from it. The cards are still playable, clickable. The not a match function was working fine, no error was found. 
+
+  * **_Click count:_** Tested by console logging the ```clicks``` variable after the match and not a match functions were executed and changing it by +2 (the two clicks which was used to turn the two cards) under the development status. After no errors were found the "console log" was removed from the code. 
+
+  * **_Checking the game completion:_** There are 30 cards (15 pairs) in the game. The ```pairs``` variable was set to 15 and with everytime when a pair got found the match function deducted it by 1. When ```pairs``` reach 0 that means there are no more pairs to find, the completion message will be poping up, the game was complete. Tested the function by playing the game till the end and changing the ```pairs``` variable in the console to check the completion window will pop up. The function was working well, no error was found.
+
+* The game was tested across multiple browsers(chrome, firefox, safari, internet explorer) and platform(Win7, Win10, iOS, Mac OS) PCs and on my Ipad mini. I asked a few of my colleagues to test it and give some feedback or possible bug reports. 
+
+### Bugs and fixes: 
+* _**The following bug reports were reported to me wich I fixed:**_
+  * **_Bug:_** While playing and the second card was flipped over and it's not a match pressing the new game button and don't wait till the cards turning back the game was frozen and not working anymore. The cards was not flipping over while the user was clicking on it.
+  
+    **_Solution:_** I added a timeout to the reset function which starts a new game and resetting the gameboard. 
+  * **_Bug:_** The game was playable while the info / welcome screen still was visible. 
+    
+    **_Solution:_** Locking the gameboard until the user not closing the info / welcome screen. 
 
 ### Code Validation
 * Validated the HTML code with [W3C](https://validator.w3.org/#validate_by_input) and no error found.
